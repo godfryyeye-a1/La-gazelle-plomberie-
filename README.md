@@ -16,7 +16,7 @@ Site web et identité visuelle de **La Gazelle Plomberie**, fondée par **M. Ach
 |---|---|---|
 | 1 | Page d'accueil : présentation, fondateur, parcours, réalisations, les 3 espaces | ✅ Faite |
 | 2 | Commander un service ou un chantier : formulaire particulier / entreprise | ✅ Fait |
-| 3 | Boutique d'outils de plomberie | ⏳ Page d'attente (WhatsApp) |
+| 3 | Boutique d'outils de plomberie | ✅ Faite, catalogue d'exemple à remplacer |
 | 4 | Formations de La Gazelle Académie et inscription en ligne | ⏳ Page d'attente (WhatsApp) |
 | 5 | Mise en ligne : nom de domaine, fiche Google, réseaux sociaux, QR codes | À venir |
 | 6 | Paiement en ligne, suivi des commandes, version anglaise | À venir |
@@ -44,6 +44,17 @@ python3 -m http.server 8000
   - `commander.html?service=urgence`
   - `commander.html?client=entreprise&service=chantier`
   - services possibles : `urgence`, `installation`, `equipements`, `renovation`, `chantier`, `maintenance`, `etude`, `autre`.
+
+## Boutique (`boutique.html`)
+
+- Catalogue avec catégories, recherche et panier. Le panier est gardé sur le téléphone du client. La commande part sur WhatsApp avec une référence `LGB-AAMMJJ-XXXX`.
+- **Les produits se modifient dans un seul fichier : `site/assets/js/produits.js`**. Pour chaque article :
+  - nom, catégorie et description ;
+  - unité (la pièce, la barre…) ;
+  - prix en FCFA, ou `null` pour afficher « Prix sur demande » ;
+  - photo : à placer dans `site/assets/img/produits/`.
+- Les articles actuels sont des **exemples** à remplacer par les vrais produits, photos et prix de La Gazelle.
+- Lien direct vers une catégorie : `boutique.html?categorie=robinetterie`. Catégories possibles : `outillage`, `tubes`, `robinetterie`, `sanitaires`, `etancheite`, `pompes`.
 
 ## Modifier les informations
 
