@@ -15,7 +15,7 @@ Site web et identité visuelle de **La Gazelle Plomberie**, fondée par **M. Ach
 | Étape | Contenu | État |
 |---|---|---|
 | 1 | Page d'accueil : présentation, fondateur, parcours, réalisations, les 3 espaces | ✅ Faite |
-| 2 | Commander un service ou un chantier : formulaire particulier / entreprise | ⏳ Page d'attente (WhatsApp) |
+| 2 | Commander un service ou un chantier : formulaire particulier / entreprise | ✅ Fait |
 | 3 | Boutique d'outils de plomberie | ⏳ Page d'attente (WhatsApp) |
 | 4 | Formations de La Gazelle Académie et inscription en ligne | ⏳ Page d'attente (WhatsApp) |
 | 5 | Mise en ligne : nom de domaine, fiche Google, réseaux sociaux, QR codes | À venir |
@@ -34,6 +34,16 @@ python3 -m http.server 8000
 1. Fusionner la branche dans `main`.
 2. Sur GitHub, aller dans **Settings → Pages → Source** et choisir **GitHub Actions**.
 3. Le site est publié automatiquement à chaque mise à jour de `main`.
+
+## Formulaire de commande (`commander.html`)
+
+- 3 étapes : le besoin, le chantier, les coordonnées. Des champs supplémentaires s'affichent pour les entreprises.
+- À la validation, le site prépare un message structuré avec une référence (`LGP-AAMMJJ-XXXX`). Le client l'envoie ensuite sur WhatsApp, par SMS, ou partage ses photos avec le message.
+- Aucune donnée n'est stockée sur un serveur. Seul un brouillon est gardé sur le téléphone du client tant que la demande n'est pas validée.
+- Liens pré-remplis, utiles pour les QR codes :
+  - `commander.html?service=urgence`
+  - `commander.html?client=entreprise&service=chantier`
+  - services possibles : `urgence`, `installation`, `equipements`, `renovation`, `chantier`, `maintenance`, `etude`, `autre`.
 
 ## Modifier les informations
 
