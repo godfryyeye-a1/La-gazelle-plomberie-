@@ -1,8 +1,8 @@
 /* Service worker : met le site en cache pour un chargement rapide et hors connexion */
-var CACHE = "la-gazelle-v2";
+var CACHE = "la-gazelle-v4";
 var CORE = [
   "./", "index.html", "boutique.html", "commander.html", "formations.html",
-  "assets/css/style.css", "assets/js/main.js", "assets/js/commander.js",
+  "assets/css/style.css", "assets/js/main.js", "assets/js/commander.js", "assets/js/produits.js", "assets/js/boutique.js",
   "assets/img/logo-sm.webp", "assets/img/logo-sm.png", "assets/img/fondateur.jpg",
   "assets/img/achille-yeye-portrait.jpg", "assets/img/favicon.png"
 ];
