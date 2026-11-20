@@ -16,7 +16,7 @@ Site web et identité visuelle de **La Gazelle Plomberie**, fondée par **M. Ach
 |---|---|---|
 | 1 | Page d'accueil : présentation, fondateur, parcours, réalisations, les 3 espaces | ✅ Faite |
 | 2 | Commander un service ou un chantier : formulaire particulier / entreprise | ✅ Fait |
-| 3 | Boutique d'outils de plomberie | ✅ Faite, catalogue d'exemple à remplacer |
+| 3 | Boutique : 95 articles de plomberie, dont 74 avec photo | ✅ Faite, prix à compléter |
 | 4 | Formations de La Gazelle Académie et inscription en ligne | ⏳ Page d'attente (WhatsApp) |
 | 5 | Mise en ligne : nom de domaine, fiche Google, réseaux sociaux, QR codes | À venir |
 | 6 | Paiement en ligne, suivi des commandes, version anglaise | À venir |
@@ -53,8 +53,12 @@ python3 -m http.server 8000
   - unité (la pièce, la barre…) ;
   - prix en FCFA, ou `null` pour afficher « Prix sur demande » ;
   - photo : à placer dans `site/assets/img/produits/`.
-- Les articles actuels sont des **exemples** à remplacer par les vrais produits, photos et prix de La Gazelle.
-- Lien direct vers une catégorie : `boutique.html?categorie=robinetterie`. Catégories possibles : `outillage`, `tubes`, `robinetterie`, `sanitaires`, `etancheite`, `pompes`.
+- Le catalogue compte **95 articles en 9 familles** : tuyaux, raccords, vannes, robinetterie, sanitaires, eau chaude, outillage, étanchéité, pompes. Tous sont en « Prix sur demande » tant que les prix ne sont pas renseignés.
+- Les photos sont des **illustrations libres de droits venant de Wikimedia Commons**, dans `site/assets/img/produits/`. Leurs auteurs et licences sont listés sur `credits-photos.html`, comme l'exigent les licences CC BY et CC BY-SA.
+- 21 articles n'ont pas encore de photo : une icône s'affiche à la place. Pour mettre votre propre photo :
+  1. Déposez un fichier JPG au format 4:3 dans `site/assets/img/produits/` sous le nom `<id>.jpg`.
+  2. Dans `produits.js`, indiquez ce chemin dans `image` et mettez `credit: null`.
+- Lien direct vers une catégorie : `boutique.html?categorie=robinetterie`. Catégories possibles : `tuyaux`, `raccords`, `vannes`, `robinetterie`, `sanitaires`, `eau-chaude`, `outillage`, `etancheite`, `pompes`.
 
 ## Modifier les informations
 

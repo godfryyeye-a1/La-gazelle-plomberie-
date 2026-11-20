@@ -1,5 +1,5 @@
 /* Service worker : met le site en cache pour un chargement rapide et hors connexion */
-var CACHE = "la-gazelle-v3";
+var CACHE = "la-gazelle-v4";
 var CORE = [
   "./", "index.html", "boutique.html", "commander.html", "formations.html",
   "assets/css/style.css", "assets/js/main.js", "assets/js/commander.js", "assets/js/produits.js", "assets/js/boutique.js",
