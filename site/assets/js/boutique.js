@@ -128,6 +128,11 @@
       img.src = p.image;
       img.alt = p.nom;
       img.loading = "lazy";
+      img.decoding = "async";
+      img.width = 480;
+      img.height = 360;
+      if (p.credit) img.title = "Photo d'illustration : " + p.credit.auteur + " · " + p.credit.licence;
+      img.onerror = function () { media.replaceChild(svgUse(cat.icone), img); };
       media.appendChild(img);
     } else {
       media.appendChild(svgUse(cat.icone));
